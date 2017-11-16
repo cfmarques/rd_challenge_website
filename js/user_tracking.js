@@ -44,6 +44,10 @@ var UserTracking = (function () {
     bindSendContactButton();
   };
 
+  var currentPathname = function () {
+    return window.location.pathname;
+  };
+
   var currentUrl = function () {
     return window.location.href;
   };
@@ -55,6 +59,7 @@ var UserTracking = (function () {
   var currentAccessedPage = function () {
     return {
       url: currentUrl(),
+      pathname: currentPathname(),
       datetime: currentDateTime()
     };
   };
