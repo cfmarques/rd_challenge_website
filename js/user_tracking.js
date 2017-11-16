@@ -98,9 +98,17 @@ var UserTracking = (function () {
     if (!userEmailInput) return;
 
     userEmail = userEmailInput.value;
+
+    if (!userEmail) {
+      alert('Não conseguimos entender o seu e-mail, poderia repetir? :)');
+      return;
+    }
+
     Store.saveUserEmail(userEmail);
     saveAccessedPage();
     trackUser();
+
+    alert('Nós cadastramos seu e-mail com sucesso, agora é só aguardar que entraremos em contato!');
   };
 
   var bindSendContactButton = function () {
