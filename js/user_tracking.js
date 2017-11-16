@@ -53,7 +53,7 @@ var UserTracking = (function () {
   };
 
   var currentDateTime = function () {
-    return new Date().toLocaleString();
+    return moment().format();
   };
 
   var currentAccessedPage = function () {
